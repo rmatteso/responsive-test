@@ -15,7 +15,7 @@ html    {
 }
 
 body    {
-    min-width: 80rem;
+    min-width: 76.8rem;
 }
 
 .left, .center, .right   {
@@ -103,6 +103,6 @@ body    {
 
 @media only screen and (max-width: 800px)   {
     .top, .bottom   {
-        min-width: 80rem;
+        min-width: 76.8rem;
     }
 }
