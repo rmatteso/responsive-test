@@ -82,7 +82,7 @@ body    {
     border-top: 0.3em solid #3672df;
     border-bottom: 0.3em solid #3672df;
 
-    overflow: scroll;
+    overflow: scroll-y;
 }
 
 .bottom .center .text-box   {
