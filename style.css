@@ -39,6 +39,7 @@ body    {
 .button.primary    {
     background: #3672df;
     color: #fff;
+    border: 0.2rem solid #fff;
 }
 
 .left, .center, .right   {
@@ -62,7 +63,7 @@ body    {
 
 .top    {
     width: 100%;
-    height: 65vh;
+    height: 63vh;
     display: flex;
 }
 
@@ -76,13 +77,13 @@ body    {
 
 .bottom {
     width: 100%;
-    height: 23vh;
+    height: 24vh;
     display: flex;
 
     border-top: 0.3em solid #3672df;
     border-bottom: 0.3em solid #3672df;
 
-    overflow: scroll-y;
+    overflow-y: scroll;
 }
 
 .bottom .center .text-box   {
@@ -98,17 +99,19 @@ body    {
 .bottom .center .text-box.primary   {
     background: #c9dbfc;
     float: left;
+    clear: left;
 }
 
 .bottom .center .text-box.secondary   {
     background: #5a6c8b;
     color: #fff;
     float: right;
+    clear: right;
 }
 
 .nav    {
     width: 100%;
-    height: 7vh;
+    height: 8vh;
     display: flex;
     background: #f6f6f6;
 }
@@ -135,45 +138,53 @@ body    {
 }
 
 .nav .center    {
+    position: relative;
     background: inherit;
+    display: flex;
 }
 
 .nav .button    {
-    margin-top: 0.4vh;
+    position: absolute;
+    bottom: 1vh;
+
+    min-height: 7.2rem; /* 72px */
+    min-width: 7.2rem;
 }
 
 .left, .right   {
     flex: 1;
 }
 
-.left   {
+.previous   {
     text-align: right;
+    left: 0;
 }
 
-@media only screen and (min-width: 1200px)  {
-    .bottom .center .text-box   {
-        font-size: 0.8em;
-    }
+.continue  {
+    right: 0;
 }
 
-@media only screen and (min-width: 1440px)  {
-    .left, .center, .right   {
-        font-size: 2.5em;
-    }
-    .nav .button    {
-        margin-top:  0.2vh;
+@media only screen and (min-width: 1110px)  {
+    .bottom .center .text-box, .nav .center, .button   {
+        font-size: 1.8rem;
     }
 }
 
 @media only screen and (max-width: 1440px)  {
     .left, .right   {
         flex: auto;
-        width: 18rem;
-        max-width: 18rem;
+    }
+
+    .center {
+        flex: auto;
+        width: 108rem;
     }
 }
 
-@media only screen and (max-width: 1000px)   {
+@media only screen and (max-width: 1025px)   {
+    .left, .right   {
+        display: none;
+    }
     .left, .center, .right   {
         font-size: 1.8em;
         padding: 1vh;
@@ -182,6 +193,15 @@ body    {
     .top .center .main-content    {
         flex: none;
     }
+
+    .previous   {
+        left: 1vh;
+    }
+
+    .continue  {
+        right: 1vh;
+    }
+
 }
 
 @media only screen and (max-width: 800px)   {
