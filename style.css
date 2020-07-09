@@ -91,7 +91,7 @@ body    {
     width: fit-content;
     display: inline-block;
     font-size: 0.9em;
-    max-width: 80%;
+    max-width: 70ch; /* try to keep ~60char per line */
     margin-bottom: 0.4em;
 }
 
