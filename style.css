@@ -85,6 +85,10 @@ body    {
     overflow-y: scroll;
 }
 
+.bottom .center {
+    padding: 1vh;
+}
+
 .bottom .center .text-box   {
     -webkit-border-radius: 0.3em;
     padding: 0.3em 0.8em 0.4em;
