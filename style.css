@@ -39,7 +39,6 @@ body    {
 .button.primary    {
     background: #3672df;
     color: #fff;
-    border: 0.2rem solid #fff;
 }
 
 .left, .center, .right   {
@@ -80,8 +79,8 @@ body    {
     height: 24vh;
     display: flex;
 
-    border-top: 0.3em solid #3672df;
-    border-bottom: 0.3em solid #3672df;
+    border-top: 0.3em solid #84a3db;
+    border-bottom: 0.3em solid #84a3db;
 
     overflow-y: scroll;
 }
