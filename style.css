@@ -28,7 +28,7 @@ body    {
     min-width: 76.8rem;
 }
 
-.button {
+.button, .avatar {
     -webkit-border-radius: 0.3em;
     padding: 0.3em 0.8em 0.4em;
     width: fit-content;
@@ -76,17 +76,37 @@ body    {
 
 .bottom {
     width: 100%;
-    height: 24vh;
+    height: 28vh;
     display: flex;
 
     border-top: 0.3em solid #84a3db;
-    border-bottom: 0.3em solid #84a3db;
-
-    overflow-y: scroll;
 }
 
 .bottom .center {
-    padding: 1vh;
+    display: flex;
+}
+
+.bottom .center .dialogue   {
+    padding: 0 1vh;
+}
+
+.bottom .avatar   {
+    position: relative;
+    top: 0;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+
+    align-self: flex-start;
+    min-height: 8rem; /* 72px */
+    min-width: 8rem;
+}
+
+.bottom .avatar.right   {
+    margin-left: 1.5rem;
+}
+
+.bottom .avatar.left   {
+    margin-right: 1.5rem;
 }
 
 .bottom .center .text-box   {
@@ -114,9 +134,8 @@ body    {
 
 .nav    {
     width: 100%;
-    height: 8vh;
+    height: 4vh;
     display: flex;
-    background: #f6f6f6;
 }
 
 .center {
@@ -146,12 +165,46 @@ body    {
     display: flex;
 }
 
+.nav .center .progress  {
+    margin: auto;
+    width: 80rem;
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0.2vh;
+    margin-top: -0.5vh;
+}
+
 .nav .button    {
-    position: absolute;
-    bottom: 1vh;
+    position: relative;
+    margin-top: -6.2vh;
 
     min-height: 7.2rem; /* 72px */
-    min-width: 7.2rem;
+    min-width: 8rem;
+}
+
+.nav .button.active {
+    background: linear-gradient(291deg, #3672df, #113d8e);
+    background-size: 400% 400%;
+
+    -webkit-animation: active 3s ease infinite;
+    -moz-animation: active 3s ease infinite;
+    animation: active 3s ease infinite;
+}
+
+@-webkit-keyframes active {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes active {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes active {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .left, .right   {
@@ -160,11 +213,6 @@ body    {
 
 .previous   {
     text-align: right;
-    left: 0;
-}
-
-.continue  {
-    right: 0;
 }
 
 @media only screen and (min-width: 1110px)  {
@@ -188,6 +236,7 @@ body    {
     .left, .right   {
         display: none;
     }
+
     .left, .center, .right   {
         font-size: 1.8em;
         padding: 1vh;
@@ -197,14 +246,25 @@ body    {
         flex: none;
     }
 
-    .previous   {
-        left: 1vh;
+    .nav .button    {
+        margin-top: -7.2vh;
     }
 
-    .continue  {
-        right: 1vh;
+    .center .left, .center .right   {
+        display: block;
     }
 
+    .center .avatar.right   {
+        margin-left: 1rem;
+    }
+
+    .center .avatar.left   {
+        margin-right: 1rem;
+    }
+
+    .nav .center .progress  {
+        margin-top: -0.9vh;
+    }
 }
 
 @media only screen and (max-width: 800px)   {
