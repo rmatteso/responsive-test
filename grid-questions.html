@@ -2,6 +2,8 @@
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="topnav">
@@ -34,14 +36,22 @@
                     <div class="text-box primary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a odio sit amet neque tristique viverra sit amet ac risus. Donec imperdiet pharetra augue?
                     </div>
-                    <div class="text-box secondary">
-                        Aliquam finibus libero consectetur venenatis rutrum.
-                    </div>
-                    <div class="text-box secondary">
-                        Quisque a odio sit amet neque tristique viverra sit amet ac risus.
+                    <div class="answers">
+                        <div class="text-box secondary">
+                            Animal
+                        </div>
+                        <div class="text-box secondary">
+                            Vegetable
+                        </div>
+                        <div class="text-box secondary">
+                            Mineral
+                        </div>
+                        <div class="text-box secondary">
+                            Quiche
+                        </div>
                     </div>
                 </div>
-                <div class="avatar right" style="top:6.5rem">
+                <div class="avatar right" style="top:7rem">
 
                 </div>
             </div>
@@ -52,19 +62,26 @@
         <div class="nav">
             <div class="left"></div>
             <div class="center">
-                <a class="button primary previous" href="#">
+                <a class="button primary previous" href="index.html">
                     <img src="icons/arrow-left-short.svg" alt="" width="32" height="32" title="Continue">
                     previous
                 </a>
                 <div class="progress">
                     PROGRESS
                 </div>
-                <a class="button primary continue active" href="grid-questions.html">
+                <a class="button primary continue active" href="#">
                     continue
                     <img src="icons/arrow-right-short.svg" alt="" width="32" height="32" title="Continue">
                 </a>
             </div>
             <div class="right"></div>
         </div>
+
+        <script>
+            $('.answers >').on('click', function()  {
+                $('.answers >').removeClass('selected');
+                $(this).addClass('selected');
+            })
+        </script>
     </body>
 </html>

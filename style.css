@@ -29,7 +29,7 @@ body    {
 }
 
 .button, .avatar {
-    -webkit-border-radius: 0.3em;
+    -webkit-border-radius: 0.4em;
     padding: 0.3em 0.8em 0.4em;
     width: fit-content;
     display: inline-block;
@@ -90,6 +90,33 @@ body    {
     padding: 0 1vh;
 }
 
+.bottom .center .dialogue .answers  {
+    display: inline-flex;
+    float: right;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+}
+
+.bottom .center .dialogue .answers > div  {
+    flex-basis: calc(50% - 1em);
+    margin: 0.5em;
+    text-align: center;
+    padding: 0.4em;
+    border: 2px solid transparent;
+}
+
+.bottom .center .dialogue .answers > div:hover  {
+    background-color: #8ca1c7;
+    cursor: pointer;
+}
+
+.bottom .center .dialogue .answers > div.selected  {
+    border-color: #ff8200;
+    background-color: #8ca1c7;
+    cursor: pointer;
+}
+
 .bottom .avatar   {
     position: relative;
     top: 0;
@@ -97,16 +124,16 @@ body    {
     border: 1px solid #ccc;
 
     align-self: flex-start;
-    min-height: 8rem; /* 72px */
-    min-width: 8rem;
+    min-height: 10rem; /* 72px */
+    min-width: 10rem;
 }
 
 .bottom .avatar.right   {
-    margin-left: 1.5rem;
+    margin-left: 3rem;
 }
 
 .bottom .avatar.left   {
-    margin-right: 1.5rem;
+    margin-right: 3rem;
 }
 
 .bottom .center .text-box   {
@@ -116,7 +143,7 @@ body    {
     display: inline-block;
     font-size: 0.9em;
     max-width: 70ch; /* try to keep ~60char per line */
-    margin-bottom: 0.4em;
+    margin-bottom: 0.6em;
 }
 
 .bottom .center .text-box.primary   {
@@ -141,7 +168,6 @@ body    {
 .center {
     max-width: 108rem;
     margin: auto;
-    background: #fff;
     display: block;
     height: 100%;
     flex: 8;
@@ -157,6 +183,11 @@ body    {
     width: 100%;
     max-height: 100%;
     align-self: center;
+}
+
+.topnav .center {
+    font-size: 2rem;
+    padding: 0;
 }
 
 .nav .center    {
@@ -179,7 +210,15 @@ body    {
     margin-top: -6.2vh;
 
     min-height: 7.2rem; /* 72px */
-    min-width: 8rem;
+    min-width: 10rem;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+}
+
+.nav .button img   {
+    filter: invert(1); /* changes black to white */
 }
 
 .nav .button.active {
@@ -264,6 +303,7 @@ body    {
 
     .nav .center .progress  {
         margin-top: -0.9vh;
+        font-size: 0.9em;
     }
 }
 
