@@ -39,6 +39,12 @@ body    {
 .button.primary    {
     background: #3672df;
     color: #fff;
+    -webkit-transition: 0.2s;
+}
+
+a.button.primary:hover{
+    -webkit-border-radius: 1em;
+    -webkit-transition: 0.2s;
 }
 
 .left, .center, .right   {
@@ -215,6 +221,7 @@ body    {
 
     display: flex;
     align-items: center;
+    border: 2px solid transparent;
 }
 
 .nav .button img   {
@@ -222,29 +229,16 @@ body    {
 }
 
 .nav .button.active {
-    background: linear-gradient(291deg, #3672df, #113d8e);
-    background-size: 400% 400%;
-
-    -webkit-animation: active 3s ease infinite;
-    -moz-animation: active 3s ease infinite;
-    animation: active 3s ease infinite;
+    filter: invert(0);
+    background: white;
+    color: #3672df;
+    border-color: #3672df
 }
 
-@-webkit-keyframes active {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+.nav .button.active img {
+    filter: invert(37%) sepia(64%) saturate(907%) hue-rotate(187deg) brightness(98%) contrast(100%);
 }
-@-moz-keyframes active {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes active {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+
 
 .left, .right   {
     flex: 1;
