@@ -72,20 +72,10 @@ a.button.primary:hover{
     display: flex;
 }
 
-.top .left, .top .right {
-    background: #f6f6f6;
-}
-
-.top .center    {
-    background: #f6f6f6
-}
-
 .bottom {
     width: 100%;
     height: 28vh;
     display: flex;
-
-    border-top: 0.3em solid #84a3db;
 }
 
 .bottom .center {
@@ -101,26 +91,35 @@ a.button.primary:hover{
     float: right;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 80%;
+    width: 101%; /* hack to deal with margins */
 }
 
-.bottom .center .dialogue .answers > div  {
+.bottom .center .dialogue .answers .text-box  {
     flex-basis: calc(50% - 1em);
     margin: 0.5em;
     text-align: center;
+    font-size: 1.6rem;
     padding: 0.4em;
     border: 2px solid transparent;
+    display: flex;
+    align-items: center;
 }
 
-.bottom .center .dialogue .answers > div:hover  {
+.bottom .center .dialogue .answers .text-box:hover  {
     background-color: #8ca1c7;
     cursor: pointer;
 }
 
-.bottom .center .dialogue .answers > div.selected  {
+.bottom .center .dialogue .answers .text-box.selected  {
     border-color: #ff8200;
     background-color: #8ca1c7;
     cursor: pointer;
+}
+
+.bottom .center .dialogue .answers .text-box p  {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
 }
 
 .bottom .avatar   {
@@ -135,11 +134,11 @@ a.button.primary:hover{
 }
 
 .bottom .avatar.right   {
-    margin-left: 3rem;
+    margin-left: 3.5rem;
 }
 
 .bottom .avatar.left   {
-    margin-right: 3rem;
+    margin-right: 3.5rem;
 }
 
 .bottom .center .text-box   {
@@ -288,11 +287,15 @@ a.button.primary:hover{
     }
 
     .center .avatar.right   {
-        margin-left: 1rem;
+        margin-left: 2.7rem;
     }
 
     .center .avatar.left   {
-        margin-right: 1rem;
+        margin-right: 2.7rem;
+    }
+
+    .answers .text-box p {
+        font-size: 1.5rem;
     }
 
     .nav .center .progress  {
